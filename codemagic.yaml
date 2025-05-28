@@ -1,0 +1,12 @@
+workflows:
+  ios-build:
+    name: iOS Release Build
+    environment:
+      flutter: "3.29.2"
+      xcode: latest
+    scripts:
+      - flutter build ios --simulator
+      - mkdir -p build/ios/ipa
+      - zip -r build/ios/ipa/Runner.app.zip build/ios/iphonesimulator/Runner.app
+    artifacts:
+      - build/ios/ipa/Runner.app.zip
