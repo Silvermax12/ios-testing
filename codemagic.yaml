@@ -2,7 +2,7 @@ workflows:
   unsigned-ios-build:
     name: Unsigned iOS Build
     environment:
-      flutter: "3.19.6" # or any stable version
+      flutter: "3.29.2"
       xcode: latest
     scripts:
       - name: Get Flutter packages
