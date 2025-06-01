@@ -22,7 +22,7 @@ workflows:
           xcodebuild -workspace ios/Runner.xcworkspace \
             -scheme Runner \
             -archivePath build/ios/archive/Runner.xcarchive \
-            archive
+            archive CODE_SIGNING_ALLOWED=NO
 
           xcodebuild -exportArchive \
             -archivePath build/ios/archive/Runner.xcarchive \
